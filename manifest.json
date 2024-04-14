@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Cảnh báo đường dẫn nguy hiểm",
+  "version": "1.0",
+  "description": "Cảnh báo người dùng khi họ nhấp vào liên kết nguy hiểm",
+  "permissions": [
+    "activeTab",
+    "scripting" 
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
